@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	{% load static %}
+	
+	<link rel="stylesheet" href="{% static 'files/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'files/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'files/fontawesome-free-5.3.1-web/css/all.css' %}">
+	<script src="{% static 'files/js/jquery.min.js' %}"></script>
+	<title>AUX-I-GEN-Home</title>
+</head>
+<body>
+
+<div id="main">	
+		<nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color: darkgoldenrod; opacity: 0.9;">
+			<span class="btnNav" onclick="openNav()">&#9776;</span>
+			  <a class="navbar-brand">
+			  	<img src="{% static 'files/img/AUXIGELog (2).png' %}" width="150px" height="50px">
+			  </a>
+
+			 <div class="navbar-nav ml-auto search">
+			 <center>
+				<form class="form-inline my-2 my-lg-0">
+				  <input class="form-control ml-sm-2" type="search" placeholder="Search" aria-label="Search">
+				  <button class="btn btn-outline-warning ml-2 my-sm-0" type="submit">Search</button>		  
+				</form>
+				</center>
+			</div>
+			
+			
+			<div id="mySidenav" class="sidenav">				
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				
+				<a href="home.html"><i class="fas fa-home"> Home</i></a>
+				<a href="/pages/musicMain"><i class="fas fa-music"> Music</i></a>
+				<a href="#"><i class="fas fa-video"> Videos</i></a>
+				<a href="#"><i class="fas fa-envelope-open"> Chat</i></a>
+				<a href="#"><i class="fas fa-newspaper"> Trending</i></a>
+				
+				<a class="fas fa-sign-in-alt" href="/pages/login">login</a>
+				<a class="" href="/pages/sign-up">sign-up</a>
+			</div>
+
+		</nav>	
+		
+		
+
+			<script>
+					function openNav() {
+					document.getElementById("mySidenav").style.width = "190px";
+					document.getElementById("main").style.marginLeft = "190px";
+				}
+
+				function closeNav() {
+					document.getElementById("mySidenav").style.width = "0";
+					document.getElementById("main").style.marginLeft= "0";
+				}
+	</script>
+
+
+
+<section id="showcase">
+	<div class="containerStyleShade">
+		<div class="containerStyle">
+			<h1>The Latest music and videos </h1>
+			<p>Aux-i-gen is the life of entertainment , bringing the world of entertainment to your finger tips. Aux-i-gen also allows artrists to sign up and upload their own music to be rated by other users .So if you are an artist or even just a music 
+			fanatic ,do the right thing and sign up!</p>
+		</div>
+	</div>
+</section>
+<div class="back">
+<div class="container" style="width: 70%;">
+<center><h1>Trending Songs</h1></center>
+	<div class="container-fluid padding">
+           <div class="row padding">
+
+             <div class="col-md-4">
+               <div class="card" style="background-color: #03141a;">
+                 <img class="card-img" src="{% static 'files/img/biggie.jpg' %}">
+                 <div class="card-body">
+                   <h4 class="card-title">1.Juicy                     </h4>
+                   <p class="card-text"><i class="fas fa-user"></i> : Notorious B.I.G</p>
+                   <p class="card-text"><i class="fas fa-compact-disc"></i> : B.I.G Greatest Hits</p>
+                   <p class="card-text"><i class="fas fa-music"></i> : Hip Hop/Rap</p>
+                   <p class="card-text"><i class="fas fa-play-circle" onclick="playThis(0 , 0)"></i> <span class="play1">1056</span></p>
+                   <p class="card-text">
+
+                   <a href="#"><i class="fas fa-arrow-circle-down"></i></a>154
+                   <a href="#"><i class="fas fa-thumbs-up"></i></a> 123
+                   <a href="#"><i class="fas fa-thumbs-down"></i></a>13
+                    <a href="#"><i class="fas fa-comment"></i></a>47
+
+                    </p>
+                  </div>
+                 </div>
+
+             </div>
+
+             <div class="col-md-4">
+               <div class="card" style="background-color: #03141a;">
+                 <img class="card-img" src="{% static 'files/img/J.jpg' %}">
+                 <div class="card-body">
+                   <h4 class="card-title">2.BRACKETS</h4>
+                   <p class="card-text"><i class="fas fa-user"></i> : J.Cole</p>
+                   <p class="card-text"><i class="fas fa-compact-disc"></i> : K.O.D</p>
+                   <p class="card-text"><i class="fas fa-music"></i> : Hip Hop</p>
+                   <p class="card-text"><i class="fas fa-play-circle" onclick="playThis(1 , 0)"></i> 1050</p>
+                   <p class="card-text">
+
+                   <a href="#"><i class="fas fa-arrow-circle-down"></i></a>154
+                   <a href="#"><i class="fas fa-thumbs-up"></i></a> 123
+                   <a href="#"><i class="fas fa-thumbs-down"></i></a>13
+                   <a href="#"><i class="fas fa-comment"></i></a>47
+
+                  </p>
+                 </div>
+               </div>
+
+             </div>
+             <div class="col-md-4">
+               <div class="card" style="background-color: #03141a;">
+                 <img class="card-img" src="{% static 'files/img/21.jpg' %}">
+                 <div class="card-body">
+                   <h4 class="card-title">3.Holding Hands                   </h4>
+                   <p class="card-text"><i class="fas fa-user"></i> : A-Reece</p>
+                   <p class="card-text"><i class="fas fa-compact-disc"></i> : And I am only 21</p>
+                   <p class="card-text"><i class="fas fa-music"></i> : Hip Hop</p>
+                   <p class="card-text"><i class="fas fa-play-circle" onclick="playThis(2 , 0)"></i> 1040</p>
+                   <p class="card-text">
+
+                    <a href="#"><i class="fas fa-arrow-circle-down"></i></a>154
+                   <a href="#"><i class="fas fa-thumbs-up"></i></a> 123
+                   <a href="#"><i class="fas fa-thumbs-down"></i></a>13
+                    <a href="#"><i class="fas fa-comment"></i></a>47
+
+
+                    </p>
+                  </div>
+                 </div>
+
+
+             </div>
+		</div>
+	</div>
+		<center><h1>Trending Songs</h1></center>
+			<div class="row">
+             <div class="col-md-4">
+               <div class="card" style="background-color: #03141a;">
+                 <img class="card-img" src="{% static 'files/img/21.jpg' %}">
+                 <div class="card-body">
+                   <h4 class="card-title">3.Holding Hands                   </h4>
+                   <p class="card-text"><i class="fas fa-user"></i> : A-Reece</p>
+                   <p class="card-text"><i class="fas fa-compact-disc"></i> : And I am only 21</p>
+                   <p class="card-text"><i class="fas fa-music"></i> : Hip Hop</p>
+                   <p class="card-text"><i class="fas fa-play-circle" onclick="playThis(2 , 0)"></i> 1040</p>
+                   <p class="card-text">
+
+                    <a href="#"><i class="fas fa-arrow-circle-down"></i></a>154
+                   <a href="#"><i class="fas fa-thumbs-up"></i></a> 123
+                   <a href="#"><i class="fas fa-thumbs-down"></i></a>13
+                    <a href="#"><i class="fas fa-comment"></i></a>47
+
+
+                    </p>
+                  </div>
+                 </div>
+
+
+             </div>
+
+             <div class="col-md-4">
+               <div class="card" style="background-color: #03141a;">
+                 <img class="card-img" src="{% static 'files/img/21.jpg' %}">
+                 <div class="card-body">
+                   <h4 class="card-title">3.Holding Hands                   </h4>
+                   <p class="card-text"><i class="fas fa-user"></i> : A-Reece</p>
+                   <p class="card-text"><i class="fas fa-compact-disc"></i> : And I am only 21</p>
+                   <p class="card-text"><i class="fas fa-music"></i> : Hip Hop</p>
+                   <p class="card-text"><i class="fas fa-play-circle" onclick="playThis(2 , 0)"></i> 1040</p>
+                   <p class="card-text">
+
+                    <a href="#"><i class="fas fa-arrow-circle-down"></i></a>154
+                   <a href="#"><i class="fas fa-thumbs-up"></i></a> 123
+                   <a href="#"><i class="fas fa-thumbs-down"></i></a>13
+                    <a href="#"><i class="fas fa-comment"></i></a>47
+
+
+                    </p>
+                  </div>
+                 </div>
+
+
+             </div>
+             <div class="col-md-4">
+               <div class="card" style="background-color: #03141a;">
+                 <img class="card-img" src="{% static 'files/img/21.jpg' %}">
+                 <div class="card-body">
+                   <h4 class="card-title">3.Holding Hands                   </h4>
+                   <p class="card-text"><i class="fas fa-user"></i> : A-Reece</p>
+                   <p class="card-text"><i class="fas fa-compact-disc"></i> : And I am only 21</p>
+                   <p class="card-text"><i class="fas fa-music"></i> : Hip Hop</p>
+                   <p class="card-text"><i class="fas fa-play-circle" onclick="playThis(2 , 0)"></i> 1040</p>
+                   <p class="card-text">
+
+                    <a href="#"><i class="fas fa-arrow-circle-down"></i></a>154
+                   <a href="#"><i class="fas fa-thumbs-up"></i></a> 123
+                   <a href="#"><i class="fas fa-thumbs-down"></i></a>13
+                    <a href="#"><i class="fas fa-comment"></i></a>47
+
+
+                    </p>
+                  </div>
+                 </div>
+
+
+             </div>
+		</div>
+	</div>
+<div class="container">
+	<center><h1>Trending news</h1></center>
+	<div class="row">
+		<div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
+            <div class="MultiCarousel-inner">
+                <div class="item">
+	               <div class="card" style="background-color: #03141a;">
+	                 <img class="card-img" src="{% static 'files/img/21.jpg' %}">
+	                 <div class="card-body">
+	                   <h5 class="card-title">1. A-reece bags international colab</h5>
+		               	<p class="card-text">
+		               		<a href="#" class="text-warning">read more</a>
+	                   	</p>
+	                  </div>
+	                </div>
+                 </div>
+                <div class="item">
+	               <div class="card" style="background-color: #03141a;">
+	                 <img class="card-img" src="{% static 'files/img/21.jpg' %}">
+	                 <div class="card-body">
+	                   <h5 class="card-title">1. A-reece bags international colab</h5>
+		               	<p class="card-text">
+		               		<a href="#" class="text-warning">read more</a>
+	                   	</p>
+	                  </div>
+	                </div>
+                </div>
+                <div class="item">
+	               <div class="card" style="background-color: #03141a;">
+	                 <img class="card-img" src="{% static 'files/img/21.jpg' %}">
+	                 <div class="card-body">
+	                   <h5 class="card-title">1. A-reece bags international colab</h5>
+		               	<p class="card-text">
+		               		<a href="#" class="text-warning">read more</a>
+	                   	</p>
+	                  </div>
+	                </div>
+                </div>
+                <div class="item">
+	               <div class="card" style="background-color: #03141a;">
+	                 <img class="card-img" src="{% static 'files/img/21.jpg' %}">
+	                 <div class="card-body">
+	                   <h5 class="card-title">1. A-reece bags international colab</h5>
+		               	<p class="card-text">
+		               		<a href="#" class="text-warning">read more</a>
+	                   	</p>
+	                  </div>
+	                </div>
+                </div>
+                <div class="item">
+	               <div class="card" style="background-color: #03141a;">
+	                 <img class="card-img" src="{% static 'files/img/21.jpg' %}">
+	                 <div class="card-body">
+	                   <h5 class="card-title">1. A-reece bags international colab</h5>
+		               	<p class="card-text">
+		               		<a href="#" class="text-warning">read more</a>
+	                   	</p>
+	                  </div>
+	                </div>
+                </div>
+                <div class="item">
+	               <div class="card" style="background-color: #03141a;">
+	                 <img class="card-img" src="{% static 'files/img/21.jpg' %}">
+	                 <div class="card-body">
+	                   <h5 class="card-title">1. A-reece bags international colab</h5>
+		               	<p class="card-text">
+		               		<a href="#" class="text-warning">read more</a>
+	                   	</p>
+	                  </div>
+	                </div>
+                </div>
+                <div class="item">
+	               <div class="card" style="background-color: #03141a;">
+	                 <img class="card-img" src="{% static 'files/img/21.jpg' %}">
+	                 <div class="card-body">
+	                   <h5 class="card-title">1. A-reece bags international colab</h5>
+		               	<p class="card-text">
+		               		<a href="#" class="text-warning">read more</a>
+	                   	</p>
+	                  </div>
+	                </div>
+                </div>
+                <div class="item">
+	               <div class="card" style="background-color: #03141a;">
+	                 <img class="card-img" src="{% static 'files/img/21.jpg' %}">
+	                 <div class="card-body">
+	                   <h5 class="card-title">1. A-reece bags international colab</h5>
+		               	<p class="card-text">
+		               		<a href="#" class="text-warning">read more</a>
+	                   	</p>
+	                  </div>
+	                </div>
+                </div>
+                <div class="item">
+	               <div class="card" style="background-color: #03141a;">
+	                 <img class="card-img" src="{% static 'files/img/21.jpg' %}">
+	                 <div class="card-body">
+	                   <h5 class="card-title">1. A-reece bags international colab</h5>
+		               	<p class="card-text">
+		               		<a href="#" class="text-warning">read more</a>
+	                   	</p>
+	                  </div>
+	                </div>
+                </div>
+                <div class="item">
+ 	                <div class="card" style="background-color: #03141a;">
+	                 <img class="card-img" src="{% static 'files/img/21.jpg' %}">
+	                 <div class="card-body">
+	                   <h4 class="card-title">3.Holding Hands                   </h4>
+		               	<p class="card-text">
+		               		
+	                   	</p>
+	                  </div>
+	                </div>
+                </div>
+                <div class="item">
+ 	                <div class="card" style="background-color: #03141a;">
+	                 <img class="card-img" src="{% static 'files/img/21.jpg' %}">
+	                 <div class="card-body">
+	                   <h4 class="card-title">3.Holding Hands                   </h4>
+		               	<p class="card-text">
+		               		
+	                   	</p>
+	                  </div>
+	                </div>
+                </div>
+                <div class="item">
+	                <div class="card" style="background-color: #03141a;">
+	                 <img class="card-img" src="{% static 'files/img/21.jpg' %}">
+	                 <div class="card-body">
+	                   <h4 class="card-title">3.Holding Hands                   </h4>
+		               	<p class="card-text">
+		               		
+	                   	</p>
+	                  </div>
+	                </div>
+                </div>
+                <div class="item">
+	                <div class="card" style="background-color: #03141a;">
+	                 <img class="card-img" src="{% static 'files/img/21.jpg' %}">
+	                 <div class="card-body">
+	                   <h4 class="card-title">3.Holding Hands                   </h4>
+		               	<p class="card-text">
+		               		
+	                   	</p>
+	                  </div>
+	                </div>
+                </div>
+                <div class="item">
+	                <div class="card" style="background-color: #03141a;">
+	                 <img class="card-img" src="{% static 'files/img/21.jpg' %}">
+	                 <div class="card-body">
+	                   <h4 class="card-title">3.Holding Hands                   </h4>
+		               	<p class="card-text">
+		               		
+	                   	</p>
+	                  </div>
+	                </div>
+                </div>
+                <div class="item">
+	                <div class="card" style="background-color: #03141a;">
+	                 <img class="card-img" src="{% static 'files/img/21.jpg' %}">
+	                 <div class="card-body">
+	                   <h4 class="card-title">3.Holding Hands                   </h4>
+		               	<p class="card-text">
+		               		
+	                   	</p>
+	                  </div>
+	                </div>
+                </div>
+                <div class="item">
+   	                <div class="card" style="background-color: #03141a;">
+	                 <img class="card-img" src="{% static 'files/img/21.jpg' %}">
+	                 <div class="card-body">
+	                   <h4 class="card-title">3.Holding Hands                   </h4>
+		               	<p class="card-text">
+		               		
+	                   	</p>
+	                  </div>
+	                </div>
+                </div>
+            </div>
+            <button class="btn btn-primary leftLst"><</button>
+            <button class="btn btn-primary rightLst">></button>
+        </div>
+	</div>
+
+</div>
+	 <div class="container-fluid padding">
+   <div class="row text-center padding">
+     <div class="col-12">
+		<p></p>
+       <h2>Connect</h2>
+      <hr>
+     </div>
+     <div class="col-12 social padding">
+       <a href="#"><i class="fab fa-facebook"></i></a>
+       <a href="#"><i class="fab fa-twitter"></i></a>
+       <a href="#"><i class="fab fa-youtube"></i></a>
+       <a href="#"><i class="fab fa-instagram"></i></a>
+     </div>
+
+   </div>
+ </div>
+	</div>
+</div>
+<footer>
+	<p>AUX-I-GEN ,Copyright &copy; 2018</p> 
+	<div class="container-fluid padding">
+      <div class="row text-center padding">
+        <div class="col-md-6">
+          <h3>Aux-i-gen</h3>
+          <hr class="light">
+          <p>0745544</p>
+          <p>auxigen@gmail.com</p>
+          <p>Potchestroom , North-West ,000</p>
+        </div>
+        <div class="col-md-6">
+          <hr class="light">
+          <h3>Our Hours</h3>
+          <hr class="light">
+          <p> Monday to friday: 8 am - 5pm</p>
+          <p>Saturday: 8am - 1pm</p>
+          <p>Sunday: Closed</p>
+        </div>
+        <div class="col-md-12">
+      </div>
+	</div>
+    </div>
+</footer>
+<script type="text/javascript">
+		$(document).ready(function () {
+    var itemsMainDiv = ('.MultiCarousel');
+    var itemsDiv = ('.MultiCarousel-inner');
+    var itemWidth = "";
+
+    $('.leftLst, .rightLst').click(function () {
+        var condition = $(this).hasClass("leftLst");
+        if (condition)
+            click(0, this);
+        else
+            click(1, this)
+    });
+
+    ResCarouselSize();
+
+
+
+
+    $(window).resize(function () {
+        ResCarouselSize();
+    });
+
+    //this function define the size of the items
+    function ResCarouselSize() {
+        var incno = 0;
+        var dataItems = ("data-items");
+        var itemClass = ('.item');
+        var id = 0;
+        var btnParentSb = '';
+        var itemsSplit = '';
+        var sampwidth = $(itemsMainDiv).width();
+        var bodyWidth = $('body').width();
+        $(itemsDiv).each(function () {
+            id = id + 1;
+            var itemNumbers = $(this).find(itemClass).length;
+            btnParentSb = $(this).parent().attr(dataItems);
+            itemsSplit = btnParentSb.split(',');
+            $(this).parent().attr("id", "MultiCarousel" + id);
+
+
+            if (bodyWidth >= 1200) {
+                incno = itemsSplit[3];
+                itemWidth = sampwidth / incno;
+            }
+            else if (bodyWidth >= 992) {
+                incno = itemsSplit[2];
+                itemWidth = sampwidth / incno;
+            }
+            else if (bodyWidth >= 768) {
+                incno = itemsSplit[1];
+                itemWidth = sampwidth / incno;
+            }
+            else {
+                incno = itemsSplit[0];
+                itemWidth = sampwidth / incno;
+            }
+            $(this).css({ 'transform': 'translateX(0px)', 'width': itemWidth * itemNumbers });
+            $(this).find(itemClass).each(function () {
+                $(this).outerWidth(itemWidth);
+            });
+
+            $(".leftLst").addClass("over");
+            $(".rightLst").removeClass("over");
+
+        });
+    }
+
+
+    //this function used to move the items
+    function ResCarousel(e, el, s) {
+        var leftBtn = ('.leftLst');
+        var rightBtn = ('.rightLst');
+        var translateXval = '';
+        var divStyle = $(el + ' ' + itemsDiv).css('transform');
+        var values = divStyle.match(/-?[\d\.]+/g);
+        var xds = Math.abs(values[4]);
+        if (e == 0) {
+            translateXval = parseInt(xds) - parseInt(itemWidth * s);
+            $(el + ' ' + rightBtn).removeClass("over");
+
+            if (translateXval <= itemWidth / 2) {
+                translateXval = 0;
+                $(el + ' ' + leftBtn).addClass("over");
+            }
+        }
+        else if (e == 1) {
+            var itemsCondition = $(el).find(itemsDiv).width() - $(el).width();
+            translateXval = parseInt(xds) + parseInt(itemWidth * s);
+            $(el + ' ' + leftBtn).removeClass("over");
+
+            if (translateXval >= itemsCondition - itemWidth / 2) {
+                translateXval = itemsCondition;
+                $(el + ' ' + rightBtn).addClass("over");
+            }
+        }
+        $(el + ' ' + itemsDiv).css('transform', 'translateX(' + -translateXval + 'px)');
+    }
+
+    //It is used to get some elements from btn
+    function click(ell, ee) {
+        var Parent = "#" + $(ee).parent().attr("id");
+        var slide = $(Parent).attr("data-slide");
+        ResCarousel(ell, Parent, slide);
+    }
+
+});
+</script>
+<script type="text/js" href="{% static 'files/js/nav.js' %}"></script>
+<script type="text/javascript" href="{% static 'files/js/slider.js' %}"></script>
+</body>
+
+</html>
